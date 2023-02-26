@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.inspiration__item, .inspiration__title, .about__title, .about__prev-title, .blog-box__item-titlelink, .blog-box__title, .works-path__item-title, .works-path__title, .decor__title, .collection__info-title, .new-collection__title, .top__slider-title, .rightside-menu__title, .footer__info-title, .menu__list-link {
+.contact__slider__title, .contact__title, .inspiration__item, .inspiration__title, .about__title, .about__prev-title, .blog-box__item-titlelink, .blog-box__title, .works-path__item-title, .works-path__title, .decor__title, .collection__info-title, .new-collection__title, .top__slider-title, .rightside-menu__title, .footer__info-title, .menu__list-link {
   font-family: montserrat, sans-serif;
   font-weight: 700;
 }
@@ -705,6 +705,15 @@ button, input, textarea, select {
   -ms-grid-row-span: 2;
   grid-row: span 2;
 }
+.gallery.gallery-page .gallery__item:nth-child(8) {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+.gallery.gallery-page .gallery__item:nth-child(8) .gallery__item img {
+  max-height: 1172px;
+}
 
 .mixitup-control-active {
   background-color: #FFEF35;
@@ -751,6 +760,8 @@ button, input, textarea, select {
 .breadcrumbs {
   background: rgba(223, 223, 223, 0.5);
   padding: 13px 14px;
+  position: relative;
+  z-index: 3;
 }
 .breadcrumbs__list {
   display: -webkit-box;
@@ -930,4 +941,160 @@ button, input, textarea, select {
 }
 .partners__item {
   margin: 0 auto;
+}
+
+.map {
+  margin-top: -53px;
+  margin-bottom: 50px;
+}
+
+.info-email {
+  font-weight: 600;
+  font-size: 14px;
+  color: #363838;
+  margin-bottom: 22px;
+  padding-left: 30px;
+  display: inline-block;
+  position: relative;
+}
+.info-email::before {
+  content: "";
+  background-image: url(../img/icons/envelope.svg);
+  left: 0;
+  width: 16px;
+  position: absolute;
+  height: 12px;
+  top: 8px;
+}
+
+.contact {
+  padding-bottom: 100px;
+}
+.contact__adress {
+  padding-left: 284px;
+}
+.contact__title {
+  color: #363838;
+  font-size: 36px;
+  line-height: 1.66; /* 60/36 */
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.contact__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 2px;
+  background-color: #6D7278;
+}
+.contact__social {
+  padding-left: 284px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 36px;
+  margin-bottom: 20px;
+}
+.contact__social-text {
+  padding-left: 284px;
+  margin-bottom: 10px;
+}
+.contact__city {
+  margin-bottom: 16px;
+}
+.contact__form {
+  padding-left: 284px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.contact__form-input {
+  border: 1px solid #DFDFDF;
+  border-radius: 20px;
+  padding: 6px 18px;
+  margin-bottom: 13px;
+  width: 48%;
+}
+.contact__form-area {
+  width: 100%;
+  border: 1px solid #DFDFDF;
+  border-radius: 24px;
+  padding: 14px 17px;
+  min-height: 125px;
+  resize: none;
+  margin-bottom: 20px;
+}
+.contact__form-btn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFF0;
+  background-color: #363838;
+  border: 1px solid #363838;
+  padding: 6px 60px;
+  border-radius: 21px;
+  cursor: pointer;
+}
+
+.contact__slider {
+  padding-bottom: 102px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact__slider__link {
+  position: relative;
+  margin-bottom: 20px;
+}
+.contact__slider__img {
+  height: 170px;
+  width: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contact__slider__title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #363838;
+  line-height: 22px;
+  padding: 0 5px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+.contact__slider__title:hover {
+  opacity: 1;
 }
