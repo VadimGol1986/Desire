@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:regular,600,300italic&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <title>Example 4</title>
 </head>
@@ -116,9 +116,21 @@ Sustainable hot chicken skateboard, dreamcatcher meggings actually squid. Slow-c
     </div>
         <div class="blog__item article-slider">
             <div class="article-slider__box">
-                <img src="img/blog/03.jpg" alt="image" class="article-slider__img">
-                <img src="img/blog/03.jpg" alt="image" class="article-slider__img">
-                <img src="img/blog/03.jpg" alt="image" class="article-slider__img">
+                <div class="article-slider__swiper">
+                    <div class="swiper-wrapper">
+
+                <img src="img/blog/03.jpg" alt="image" class="article-slider__img swiper-slide">
+                <img src="img/blog/03.jpg" alt="image" class="article-slider__img swiper-slide">
+                <img src="img/blog/03.jpg" alt="image" class="article-slider__img swiper-slide">
+                
+                    </div>
+                    <div class="article-button-prev">
+                        <img src="img/icons/arrow-left-slider.svg" alt="arrow-left">
+                    </div>
+                    <div class="article-button-next">
+                        <img src="img/icons/arrow-right-slider.svg" alt="arrow-right">
+                    </div>
+                </div>
                 <div class="blog__item">
                     <div class="blog__item-info">
                         <span class="blog__item-date">August 18, 2020</span> |
@@ -313,7 +325,7 @@ Sustainable hot chicken skateboard, dreamcatcher meggings actually squid. Slow-c
     </footer>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

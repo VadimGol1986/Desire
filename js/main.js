@@ -19,15 +19,17 @@ function documentActions(e) {
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+                grabCursor: true,
+                navigation: false,
               },
-            navigation: {
+            /*navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
               },
               slidesPerView: 1,
             observer: true,
-            observeParents: true,
-           /* slidesPerView: 1,
+            observeParents: true,*/
+            /* slidesPerView: 1,
             observer: true,
             observeParents: true,
             spaceBetween: 50,
@@ -47,35 +49,27 @@ function documentActions(e) {
     }
 
     //-------Contact Slider 
-    /*if (document.querySelector('.contact__slider')) {
-        const swiper2 = new Swiper('.swiper2', {
+    if (document.querySelector('.contact__slider')) {
+        const swiper2 = new Swiper('.contact__slider', {
             loop: true,
             pagination: {
                 el: '.contact__pagination',
                 clickable: true,
               },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              },
-            slidesPerView: 1,
-            observer: true,
-            observeParents: true,
-            spaceBetween: 50,
-            watchOverflow: true,
-            speed: 800,
-            loopAdditionalSlides: 5,
-            preloadImages: false,
-            parallax: true,
-
-            navigation: none, 
-            
-            mousewheel: {
-                sensitivity: 1,
-                eventsTarget: ".page__main-slider",
-            }
         });
-    }*/
+    }
+
+        //-------Article Slider 
+        if (document.querySelector('.article-slider__swiper')) {
+            const swiper2 = new Swiper('.article-slider__swiper', {
+                loop: true,
+                navigation: {
+                nextEl: '.article-button-next',
+                prevEl: '.article-button-prev',
+                slidesPerView: 1,
+              },
+        });
+    }
 
 
 

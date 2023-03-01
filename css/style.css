@@ -351,21 +351,23 @@ button, input, textarea, select {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  max-width: 1350px;
+  padding-bottom: 70px;
+}
+.top::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/main_slider_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 722px;
+  top: 0;
 }
 .top__inner {
+  max-width: 1350px;
   min-width: 0;
-  padding-bottom: 70px;
+  padding-bottom: 10px;
   position: relative;
-  /*&::after {
-      content: '';
-      position: absolute;
-      background-image: url(../img/main_slider_background.jpg);
-      width: 100%;
-      height: 722px;
-      top: 0;
-      z-index: -1;
-  }*/
 }
 .top__slider-item {
   display: -webkit-box;
@@ -412,15 +414,23 @@ button, input, textarea, select {
   overflow: hidden;
   min-width: 0;
 }
-
-.swiper-wrapper .top__slider {
-  -webkit-transform: translate3d(0px, 0, 0) !important;
-          transform: translate3d(0px, 0, 0) !important;
-  min-width: 0;
+.swiper .swiper-pagination {
+  bottom: -15px;
 }
 
-.top__slider {
-  min-width: 0;
+.swiper-wrapper .top__slider {
+  -webkit-transform: translate3d(0px, 0, 0);
+          transform: translate3d(0px, 0, 0);
+}
+
+.swiper-pagination-bullet {
+  background-color: #363838;
+  opacity: 1;
+  margin: 15px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #FFEF35;
 }
 
 /*.swiper-pagination {
@@ -1062,14 +1072,15 @@ button, input, textarea, select {
 }
 
 .contact__slider {
-  padding-bottom: 102px;
+  min-width: 0;
+  margin-bottom: 102px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1110,6 +1121,19 @@ button, input, textarea, select {
 }
 .contact__slider__title:hover {
   opacity: 1;
+}
+
+.contact__slider-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact__pagination.swiper-pagination-bullets {
+  text-align: center;
 }
 
 .blog {
@@ -1238,6 +1262,7 @@ button, input, textarea, select {
 
 .blog__item {
   max-width: 730px;
+  margin-bottom: 70px;
 }
 .blog__item-info {
   padding: 25p 0 10px;
@@ -1298,6 +1323,29 @@ button, input, textarea, select {
   position: relative;
 }
 
+.article-slider__swiper {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.article-button-prev {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  -webkit-transform: translate(150%, -50%);
+          transform: translate(150%, -50%);
+}
+
+.article-button-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 10;
+  -webkit-transform: translate(-150%, -50%);
+          transform: translate(-150%, -50%);
+}
+
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1345,7 +1393,7 @@ button, input, textarea, select {
   padding: 0 40px;
 }
 
-.blog__blockquote-author::before {
+.blog-one__item .blog__blockquote-author::before {
   margin-right: auto;
   margin-left: 0;
 }
@@ -1431,7 +1479,9 @@ button, input, textarea, select {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-bottom: 40px;
+}
+.blog-one__comments-item p {
+  margin-bottom: 0;
 }
 .blog-one__comments-avatar {
   width: 64px;
@@ -1446,9 +1496,10 @@ button, input, textarea, select {
   line-height: 23px;
 }
 .blog-one__comments-date {
-  margin-bottom: 10px;
   font-size: 14px;
   color: #A1A1A1;
+  -webkit-transform: translate(0, -8px);
+          transform: translate(0, -8px);
 }
 .blog-one__reply {
   margin-left: 5px;
@@ -1471,7 +1522,7 @@ button, input, textarea, select {
 .blog-one__form-title {
   margin-bottom: 25px;
   color: #363838;
-  line-height: 23;
+  line-height: 23px;
 }
 .blog-one__form-textarea {
   resize: none;
