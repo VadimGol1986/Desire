@@ -12,19 +12,22 @@ function documentActions(e) {
             }   
     }
 //-------Slider
-    if (document.querySelector('.top__slider')) {
-        const swiper = new Swiper('.swiper', {
+    if (document.querySelector('.top__inner')) {
+        const swiper = new Swiper('.top__inner', {
             /*direction: 'horizontal',*/
             loop: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
               },
-            /*navigation: {
+            navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
-              },*/
-            slidesPerView: 1,
+              },
+              slidesPerView: 1,
+            observer: true,
+            observeParents: true,
+           /* slidesPerView: 1,
             observer: true,
             observeParents: true,
             spaceBetween: 50,
@@ -32,7 +35,7 @@ function documentActions(e) {
             speed: 800,
             loopAdditionalSlides: 5,
             preloadImages: false,
-            parallax: true,
+            parallax: true,*/
 
             /*navigation: none, */
             
@@ -44,18 +47,17 @@ function documentActions(e) {
     }
 
     //-------Contact Slider 
-    if (document.querySelector('.contact__slider')) {
-        const swiper = new Swiper('.swiper', {
-            /*direction: 'horizontal',*/
+    /*if (document.querySelector('.contact__slider')) {
+        const swiper2 = new Swiper('.swiper2', {
             loop: true,
             pagination: {
                 el: '.contact__pagination',
                 clickable: true,
               },
-            /*navigation: {
+            navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
-              },*/
+              },
             slidesPerView: 1,
             observer: true,
             observeParents: true,
@@ -66,14 +68,14 @@ function documentActions(e) {
             preloadImages: false,
             parallax: true,
 
-            /*navigation: none, */
+            navigation: none, 
             
-            /*mousewheel: {
+            mousewheel: {
                 sensitivity: 1,
                 eventsTarget: ".page__main-slider",
-            }*/
+            }
         });
-    }
+    }*/
 
 
 
