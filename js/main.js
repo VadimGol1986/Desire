@@ -4,13 +4,34 @@
 document.addEventListener("click", documentActions);
 function documentActions(e) {
     const targetElement = e.target;
+    console.log(targetElement);
         if (targetElement.classList.contains ('header__btn--icon')) {
             document.querySelector('.rightside-menu').classList.remove('rightside-menu--close');
             }
         if (targetElement.classList.contains ('rightside-menu__close--icon')) {
                 document.querySelector('.rightside-menu').classList.add('rightside-menu--close');
             }   
+
+
     }
+
+    /*document.addEventListener("click", documentActions);
+    function documentActions(e) {
+        const targetElement = e.target;
+        const buttonMenu = targetElement.parentElement;
+        console.log(targetElement);
+        console.log(buttonMenu);
+            if (buttonMenu.classList.contains ('header__btn-menu')) {
+                document.querySelector('.menu').classList.toggle('menu--open');
+                }
+        }*/
+
+
+
+
+
+
+
 //-------Slider
     if (document.querySelector('.top__inner')) {
         const swiper = new Swiper('.top__inner', {
