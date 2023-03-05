@@ -4,13 +4,21 @@
 document.addEventListener("click", documentActions);
 function documentActions(e) {
     const targetElement = e.target;
+    const buttonMenu = targetElement.parentElement;
     console.log(targetElement);
         if (targetElement.classList.contains ('header__btn--icon')) {
             document.querySelector('.rightside-menu').classList.remove('rightside-menu--close');
             }
         if (targetElement.classList.contains ('rightside-menu__close--icon')) {
                 document.querySelector('.rightside-menu').classList.add('rightside-menu--close');
-            }   
+            }  
+
+        if (buttonMenu.classList.contains ('header__btn-menu')) {
+            let menuItems = document.querySelectorAll('.menu');
+            for (let i = 0; i < menuItems.length; i++) {
+               menuItems[i].classList.toggle('menu--open');
+            } 
+            }
 
 
     }
