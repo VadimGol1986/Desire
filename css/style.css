@@ -1647,6 +1647,13 @@ button, input, textarea, select {
   cursor: pointer;
 }
 
+@media (max-width: 1800px) {
+  .contact__slider__img {
+    height: 100%;
+    width: 100%;
+    padding: 2px;
+  }
+}
 @media (max-width: 1300px) {
   .top__slider-title {
     font-size: 62px;

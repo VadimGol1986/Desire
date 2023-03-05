@@ -85,6 +85,24 @@ function documentActions(e) {
                 el: '.contact__pagination',
                 clickable: true,
               },
+              breakpoints: {
+                320: {
+                    slidesPerView: 0.2,
+                },
+
+                375: {
+                    slidesPerView: 0.3,
+                },
+                541: {
+                    slidesPerView: 0.4,
+                },
+                768: {
+                    slidesPerView: 0.6,
+                },
+                992: {
+                    slidesPerView: 1,
+                }
+            }
         });
     }
 
@@ -109,4 +127,3 @@ function documentActions(e) {
         }
     });
 }
-
