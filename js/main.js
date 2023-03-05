@@ -23,22 +23,6 @@ function documentActions(e) {
 
     }
 
-    /*document.addEventListener("click", documentActions);
-    function documentActions(e) {
-        const targetElement = e.target;
-        const buttonMenu = targetElement.parentElement;
-        console.log(targetElement);
-        console.log(buttonMenu);
-            if (buttonMenu.classList.contains ('header__btn-menu')) {
-                document.querySelector('.menu').classList.toggle('menu--open');
-                }
-        }*/
-
-
-
-
-
-
 
 //-------Slider
     if (document.querySelector('.top__inner')) {
@@ -51,29 +35,6 @@ function documentActions(e) {
                 grabCursor: true,
                 navigation: false,
               },
-            /*navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              },
-              slidesPerView: 1,
-            observer: true,
-            observeParents: true,*/
-            /* slidesPerView: 1,
-            observer: true,
-            observeParents: true,
-            spaceBetween: 50,
-            watchOverflow: true,
-            speed: 800,
-            loopAdditionalSlides: 5,
-            preloadImages: false,
-            parallax: true,*/
-
-            /*navigation: none, */
-            
-            /*mousewheel: {
-                sensitivity: 1,
-                eventsTarget: ".page__main-slider",
-            }*/
         });
     }
 
